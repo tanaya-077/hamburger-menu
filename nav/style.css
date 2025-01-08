@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
+.side-bar{
+    top: 4px;
+    position: fixed; 
+    left: -365px; 
+    height: 100vh;
+    width: 300px; 
+    background-color: rgb(255, 255, 255, 0.1);
+    box-shadow: 0 0 2px rgb(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+.btn-two{
+    padding-top: 1rem;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.nav ul{
+   list-style: none; 
+   display: flex;
+   flex-direction: column;
+   gap:5rem;
+   padding: 4rem 6rem;
+   font-size: 1.5rem;
+   transition: ease-in-out;
+   cursor: pointer;
+}
+.nav ul li:hover{
+    text-shadow: 0px 0px 2px white;
+}
+.btn-one i {
+    padding-left: 2rem;
+    font-size: 2.5rem;
+
+}
+.social_media ul{
+   display: flex;
+   gap: 2rem;
+}
+.social_media i {
+    position: relative; 
+    left: 4rem; 
+    color: rgba(255, 255, 255, 0.5); 
+    transition:  0.3s ease-in-out;
+    box-shadow:ease-in-out; 
+}
+
+.social_media i:hover {
+    box-shadow: 0 0 2px rgb(255, 255, 255); 
+    color: white; 
+}
+
+
+#check{
+    visibility: hidden;
+}
+#check:checked ~ .side-bar{
+    left: 0; 
+}
+#check:checked ~ .btn-one i{
+   opacity: 0;
+}
+
+
+@media (max-width: 360px){
+    .side-bar{
+        width: 100%;
+        height: 100vh;
+    }
+    .nav ul{
+        display:flex;
+        align-items: center;
+    }
+    .social_media ul{
+        display:flex;
+        align-items: center;
+    }
+    .social_media i {
+        position: relative; 
+        left: 6rem;
+    }
+    .social_media i:hover {
+        box-shadow: 0 0 2px rgb(255, 255, 255); 
+        color: white; 
+    }
+    
+    .nav ul li:hover{
+        text-shadow: 0px 0px 2px white;
+    }
+}
